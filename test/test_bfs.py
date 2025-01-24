@@ -60,7 +60,7 @@ def test_bfs():
         raise
 
     # bad graph tests
-    bad_graph = Graph('bad_graph.adlist')
+    bad_graph = Graph('bad_graph.adjlist')
     assert bad_graph.bfs(start='d', end='a') is None, "BFS does not return None when no path exists"
     assert bad_graph.bfs(start='g', end='a') is None, "The node does not exist, yet it did not return 'None'. Curious."
 
