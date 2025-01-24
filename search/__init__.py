@@ -7,4 +7,4 @@ from .graph import (
         Graph)
 
 
-__version__ = "99.99.99.99.99"
+__version__ = "99.99.99.99.99.99"
