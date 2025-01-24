@@ -14,14 +14,14 @@ def test_bfs_traversal():
 
     # my test graph
     test_graph = Graph("data/tiny_network.adjlist")
-    bmi_fac = 'Sergio Baranzini'
+    bmi_fac = 'Luke Gilbert'
 
     try:
         bfs_test = test_graph.bfs(start=bmi_fac)
     except Exception as e:
         pytest.fail(f"The bfs function failed with: {e}")
         raise
-    
+
     # check how many nodes there are
     test_len = len(test_graph.get_nodes())
     test_set = set(test_graph.get_nodes())
@@ -60,7 +60,7 @@ def test_bfs():
         raise
 
     # bad graph tests
-    bad_graph = Graph('bad_graph.adjlist')
+    bad_graph = Graph('test/bad_graph.adjlist')
     assert bad_graph.bfs(start='d', end='a') is None, "BFS does not return None when no path exists"
     assert bad_graph.bfs(start='g', end='a') is None, "The node does not exist, yet it did not return 'None'. Curious."
 
